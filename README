@@ -1,0 +1,9 @@
+INSTRUCTIONS FOR RUNNING THE CODE
+
+Run network.py to perform a single trial of 15 independent evolutionary runs (this number can be changed via the 'runs' varibale in the main function. Set the desired network and GA parameters at the top of the code and make sure than these values are matched in the main function when it instantiates an object of the Population class.
+
+To test without the presence of self-loops, set the Population object variable 'self_inputs' to False. 
+To test the presence of self-loops occurring at random (i.e. 15%) set the variable to True. 
+To change the ratio of nodes with self-inputs, uncomment lines 58 - 61 in Population.py and set the variable 'sl_ratio' to the desired amount. Then in Network.py, set the value of self_inputs to be False when calling it. Although False, uncommenting the lines will then adjust the ratio and allow self-inputs.
+
+NOTE: a single evolutionary run takes around 24 minutes to run at a target length of 50 (see appendix figure 7 report), so allow enough time when running 15 runs - or adjust tournaments number, runs and target length to much smaller values (e.g. 200, 5 and 20 to test more quickly).
